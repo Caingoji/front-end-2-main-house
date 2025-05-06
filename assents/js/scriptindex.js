@@ -36,6 +36,30 @@ function validar(){
     else
         {
             console.log("no cumple")
-            
+            alert("debe ingresar mas de 3 caracteres en el apellido")
+            eErrorApellido.innerText = "debes ingresar mas de 3 caracteres!"
+            eApellido.style.backgroundColor = "red"
+            eApellido.style.color = "white"
+        }
+
+    let eEdad = document.getElementById("Edad")
+    let vEdad = eEdad.value
+    let eErrorEdad = document.getElementById("ErrorEdad")
+
+    console.log(eEdad)
+    console.log(vEdad)
+    if(vEdad >= 18)
+        {
+            console.log("si cumple")
+            eErrorEdad.innerText=" "
+            eEdad.style.backgroundcolor = "green"
+            eEdad.style.color = "white"
+        }
+    else
+        {
+            console.log("no cumple")
+            alert("Debe tener minimo 18 años para ingresar")
+            eErrorEdad.innerText = "Debes tener almenos 18 años"
+            eEdad.style.backgroundcolor = "red" 
         }
 }
