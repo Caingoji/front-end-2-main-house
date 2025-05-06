@@ -42,29 +42,24 @@ function validar(){
             eApellido.style.color = "white"
         }
 
-    let eEdad = document.getElementById("Edad");
-    let vEdad = eEdad.value;
-    let eErrorEdad = document.getElementById("ErrorEdad");
-
-    if 
-    (vEdad == "" || isNaN(vEdad) || parseInt(vEdad) != vEdad || vEdad <= 0) 
-    {
-        alert("El valor ingresado no es un valor numérico positivo y entero");
-        eErrorEdad.innerText = "Debes ingresar un número entero positivo";
-        eEdad.style.backgroundColor = "red";
-        eEdad.style.color = "white";
-    } 
-    else if (vEdad >= 18) 
-    {
-        eErrorEdad.innerText = "";
-        eEdad.style.backgroundColor = "green";
-        eEdad.style.color = "white";
-    } 
-    else 
-    {
-        alert("Debe tener mínimo 18 años para ingresar");
-        eErrorEdad.innerText = "Debes tener al menos 18 años";
-        eEdad.style.backgroundColor = "red";
-        eEdad.style.color = "white";
-    }
+    let eEdad = document.getElementById("Edad")
+    let vEdad = eEdad.value
+    let eErrorEdad = document.getElementById("ErrorEdad")
+    
+    console.log(eEdad)
+    console.log(vEdad)
+    if(vEdad >= 18)
+        {
+            console.log("si cumple")
+            eErrorEdad.innerText=" "
+            eEdad.style.backgroundcolor = "green"
+            eEdad.style.color = "white"
+        }
+    else
+        {
+            console.log("no cumple")
+            alert("Debe tener minimo 18 años para ingresar")
+            eErrorEdad.innerText = "Debes tener almenos 18 años"
+            eEdad.style.backgroundcolor = "red" 
+        }
 }
